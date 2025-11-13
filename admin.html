@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html><head><title>Admin Panel</title>
+<link rel="stylesheet" href="assets/styles.css">
+<script src="assets/script.js" defer></script>
+</head><body>
+<div class="container">
+<h2>Admin Panel</h2>
+<h3>Add Product</h3>
+<form onsubmit="addProduct(event)">
+<input type="text" id="pname" placeholder="Product Name" required><br>
+<input type="number" id="pprice" placeholder="Price" step="0.01" required><br>
+<input type="text" id="pimage" placeholder="Image URL" required><br>
+<input class="btn" type="submit" value="Add Product">
+</form>
+<h3>Products</h3>
+<div id="admin-products"></div>
+<h3>Orders</h3>
+<div id="orders"></div>
+<button class="btn" onclick="logout()">Logout</button>
+<script>window.onload=()=>{loadAdminProducts();loadOrders();};</script>
+</div>
+</body></html>
